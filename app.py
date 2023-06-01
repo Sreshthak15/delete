@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import aws_cdk as cdk
-from my_pipeline.my_pipeline_stack_new_new import MyPipelineStack
+from my_pipeline.my_pipeline_stack import MyPipelineStack
 
 app = cdk.App()
 MyPipelineStack(app, "MyPipelineStack",
