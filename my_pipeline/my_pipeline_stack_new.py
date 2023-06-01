@@ -11,7 +11,8 @@ class MyPipelineStack(cdk.Stack):
                         pipeline_name="MyPipeline",
                         synth=ShellStep("Synth",
                             input=CodePipelineSource.git_hub("Sreshthak15/delete", "main"),
-                            commands=["python -m pip install -r requirements.txt",
+                            commands=["source .venv/bin/activate",
+                                "python -m pip install -r requirements.txt",
                                 "cdk --version",
                                 "cdk synth"]
                         )
